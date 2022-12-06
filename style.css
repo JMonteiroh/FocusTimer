@@ -15,9 +15,23 @@
 }
 
 body {
+  display: grid;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  justify-self: center;
+  align-self: end;
+}
+
+footer {
+  justify-self: end;
+  align-self: end;
+
+  padding: 0 4rem 3.2rem 0;
 }
 
 button {
@@ -37,16 +51,26 @@ button {
 
 }
 
+button svg {
+  width: clamp(3.2rem, 4rem + 8vw, 6.4rem);
+  /* height: clamp(3.2rem, 6rem + 8vh, 6.4rem ); */
+}
+
 #timer {
-  font-size: 8.8rem;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   display: flex;
+  margin-bottom: 1.6rem;
 
 }
 
 #controls {
   background-color: var(--bg-primary-light);
   display: flex;
+  gap: 3.2rem;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
+  width: clamp(15rem, 18rem + 10vw, 22.8rem);
+  height: clamp(8rem, 8rem + 20vh, 10.8rem);
 }
+
